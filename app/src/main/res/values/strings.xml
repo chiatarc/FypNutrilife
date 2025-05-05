@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NutriLife</string>
+    <string name="default_web_client_id">492520377553-47cppakahvh504eqsm7tnr9j56ng22lh.apps.googleusercontent.com</string>
+    <string name="title_activity_main_page_recipe">MainPageRecipe</string>
+</resources>
