@@ -1,0 +1,436 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - nlu_fallback
+
+  # Features-Related Intents
+  - ask_about_features
+  - ask_recipe_planning_feature
+  - ask_community_feature
+  - ask_grocery_list_feature
+  - ask_health_tracker_feature
+  - ask_weight_tracking_feature
+  - ask_blood_pressure_monitoring_feature
+  - ask_meal_planning_feature
+  - ask_water_intake_tracker_feature
+  - ask_calorie_tracking_feature
+  - ask_cholesterol_tracking_feature
+  - ask_chatbot_feature
+  - ask_save_favorite_recipes_feature
+  - ask_dark_mode_feature
+  - ask_blood_glucose_tracking_feature
+  - ask_show_report_on_health_metrics_or_daily_analysis
+  - ask_community_feature_for_posting_sharing
+
+  # How-to-Use-App Intents
+  - ask_guidance_on_using_app
+  - ask_navigate_app
+  - ask_create_account
+  - ask_login_google
+  - ask_forgot_password
+  - ask_change_profile_info
+  - ask_create_grocery_list
+  - ask_save_recipe
+  - ask_track_weight
+  - ask_log_water_intake
+  - ask_post_in_community
+  - ask_track_calories
+  - ask_schedule_meals
+  - ask_create_recipe
+  - ask_track_health_metrics
+  - ask_compare_before_after_photos
+  - ask_view_health_reports
+  - ask_use_chatbot
+  - ask_report_inappropriate_content
+  - ask_switch_dark_mode
+  - ask_log_out
+  - ask_view_saved_recipes
+
+  # Health / Metabolic Syndrome Intents
+  - ask_what_is_metabolic_syndrome
+  - ask_how_is_metabolic_syndrome_diagnosed
+  - ask_risk_factors_metabolic_syndrome
+  - ask_can_metabolic_syndrome_be_reversed
+  - ask_lifestyle_changes_for_metabolic_syndrome
+  - ask_diet_effect_on_metabolic_syndrome
+  - ask_exercises_for_metabolic_syndrome
+  - ask_foods_to_avoid_for_metabolic_syndrome
+  - ask_heart_health_metabolic_syndrome
+  - ask_what_is_insulin_resistance
+  - ask_weight_loss_benefit_for_metabolic_syndrome
+  - ask_blood_pressure_relation_metabolic_syndrome
+  - ask_cholesterol_role_metabolic_syndrome
+  - ask_frequency_of_blood_sugar_checks
+  - ask_stress_effect_on_metabolic_syndrome
+  - ask_is_metabolic_syndrome_genetic
+  - ask_sleep_effect_on_metabolic_syndrome
+  - ask_supplements_for_metabolic_syndrome
+  - ask_alcohol_effect_on_metabolic_syndrome
+  - ask_long_term_risks_metabolic_syndrome
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+      - text: "I am a bot, powered by Rasa."
+
+  # Ask how about features #
+  utter_ask_about_features_1:
+    - text: "This app is packed with amazing features to help you stay healthy! It includes a health tracker, meal planning, a supportive community, and even a chatbot to guide you!"
+    - text: "Our app offers a wide range of features designed to keep you healthy, including a health tracker, meal planner, community support, and a chatbot!"
+    - text: "You'll find incredible features in this app such as health tracking, meal planning, community interaction, and a helpful chatbot!"
+    - text: "Packed with useful tools, our app helps you maintain your health with a tracker, meal planning, community support, and an interactive chatbot!"
+
+  utter_ask_about_features_2:
+    - text: "With this app, you can track your weight, monitor blood pressure, log daily meals, plan workouts, and even save your favorite recipes!"
+    - text: "This app lets you track your weight, check your blood pressure, record daily meals, plan workouts, and bookmark your favorite recipes."
+    - text: "You can easily monitor your weight and blood pressure, log meals, schedule workouts, and save recipes you love with our app."
+    - text: "Track your weight, blood pressure, daily meals, and workouts—and even save your favorite recipes—all within this app!"
+
+  utter_ask_about_features_3:
+    - text: "Our app is designed to help you maintain a healthier lifestyle. You can log your food intake, track your progress, and connect with others in the community."
+    - text: "Designed for a healthier lifestyle, our app allows you to record your meals, monitor progress, and engage with a supportive community."
+    - text: "Keep a healthier lifestyle by logging your food intake, tracking progress, and connecting with like-minded users in our community."
+    - text: "Maintain your health by recording your meals, tracking your progress over time, and joining a vibrant community of users!"
+
+  utter_ask_about_features_4:
+    - text: "Yes! You can track your health with features like weight monitoring, calorie tracking, blood pressure logging and more!"
+    - text: "Absolutely! The app lets you monitor your weight, calories, blood pressure, and other key health metrics."
+    - text: "Definitely! With our app, you can keep tabs on your weight, calorie intake, blood pressure, and much more."
+    - text: "Indeed! You can track your weight, count calories, log blood pressure, and access other health monitoring features."
+
+  utter_ask_about_features_5:
+    - text: "Absolutely! The app provides recipe planning, allowing you to save, schedule, and organize meals according to your health goals."
+    - text: "For sure! You can plan, schedule, and organize your meals easily with our built-in recipe planning tool."
+    - text: "Yes, the app includes a robust recipe planning feature to help you save and manage your meal plans."
+    - text: "Certainly! With our recipe planning option, you can organize, schedule, and save meals based on your health objectives."
+
+  utter_ask_about_features_6:
+    - text: "Yes! The app includes a community feature where you can post updates, interact with others, and even get motivation from trending posts."
+    - text: "Indeed! You can join the app's community to share updates, interact with fellow users, and get inspired by trending content."
+    - text: "Absolutely! The community feature lets you post, comment, and engage with others to stay motivated."
+    - text: "Yes, our app offers a community space where you can interact, share updates, and receive support from others."
+
+  utter_ask_about_features_7:
+    - text: "Yes, you can create grocery lists to make shopping for healthy meals more convenient!"
+    - text: "Certainly! The app allows you to build grocery lists, making healthy meal shopping a breeze."
+    - text: "Absolutely, you can organize your shopping by creating and managing grocery lists within the app."
+    - text: "For sure! Compile your grocery lists in the app to streamline your healthy meal shopping experience."
+
+  utter_ask_about_features_8:
+      - text: "Our app includes a health tracker to monitor your weight, water intake, blood sugar levels, and even cholesterol!"
+      - text: "The app features a comprehensive health tracker to keep an eye on your weight, hydration, blood sugar, and cholesterol."
+      - text: "Yes, you can monitor various health metrics including weight, water intake, blood sugar, and cholesterol with our tracker."
+      - text: "Our health tracker helps you log weight, track water consumption, monitor blood sugar, and check cholesterol levels."
+
+  utter_ask_about_features_9:
+    - text: "Yes, there's a weight tracking feature where you can log daily updates and even view progress over time with graphs."
+    - text: "Indeed! You can track your weight daily and see your progress over time through clear, visual graphs."
+    - text: "Absolutely! The weight tracker lets you log updates every day and view progress charts to monitor changes."
+    - text: "Yes, the app offers a weight tracking tool that records daily entries and displays your progress in graphs."
+
+  utter_ask_about_features_10:
+    - text: "Definitely! The app allows you to record and monitor your blood pressure readings for better health management."
+    - text: "Certainly! You can log your blood pressure readings and track them over time within the app."
+    - text: "Yes, the app lets you monitor your blood pressure easily to help manage your overall health."
+    - text: "Absolutely! Record and check your blood pressure with our dedicated tracking feature for effective health management."
+
+  utter_ask_about_features_11:
+    - text: "Yes, meal planning is available! You can schedule meals, browse recipes, and plan your nutrition effectively."
+    - text: "Definitely! The app includes a meal planning tool where you can schedule meals and explore a variety of recipes."
+    - text: "Absolutely! Plan your meals, browse through recipes, and manage your nutrition effortlessly with our app."
+    - text: "Yes, you can effectively plan and schedule your meals, while also browsing a range of nutritious recipes."
+
+  utter_ask_about_features_12:
+    - text: "Yes, our water intake tracker helps ensure you're drinking enough water daily!"
+    - text: "For sure! The water tracker in the app helps you monitor your daily hydration easily."
+    - text: "Absolutely! Keep track of your water consumption each day with our built-in water intake feature."
+    - text: "Yes, you can use our water intake tracker to ensure you're staying properly hydrated throughout the day."
+
+  utter_ask_about_features_13:
+    - text: "You bet! The calorie tracker lets you log meals and check how many calories you've consumed."
+    - text: "Indeed! With our calorie tracker, you can record your meals and monitor your calorie intake effectively."
+    - text: "Absolutely! The app allows you to log food and track the calories you consume on a daily basis."
+    - text: "Yes, the calorie tracking feature helps you keep a close eye on your daily calorie consumption."
+
+  utter_ask_about_features_14:
+    - text: "Yes, you can monitor cholesterol levels, including HDL and triglycerides, to keep track of your heart health."
+    - text: "Certainly! The app lets you track your cholesterol, including HDL and triglycerides, for better heart health."
+    - text: "Absolutely, you can monitor various cholesterol markers like HDL and triglycerides with our app."
+    - text: "Yes, keep track of your cholesterol levels—including HDL and triglycerides—to monitor your heart health effectively."
+
+  utter_ask_about_features_15:
+    - text: "Yes! You can engage in the community by posting, liking, commenting, and sharing health-related updates."
+    - text: "Definitely! The community feature lets you post updates, like, comment, and share health tips with others."
+    - text: "Absolutely! Engage with fellow users by posting, commenting, and sharing your health journey in the community."
+    - text: "Yes, you can interact within the community by sharing posts, liking updates, and joining discussions on health topics."
+
+  utter_ask_about_features_16:
+    - text: "Of course! The app has a built-in chatbot to assist you with any questions and provide guidance."
+    - text: "Absolutely! Our built-in chatbot is ready to help answer your questions and offer guidance."
+    - text: "Yes, the app features an interactive chatbot that provides assistance and answers your queries."
+    - text: "Certainly! You can chat with our in-app chatbot anytime for help and personalized advice."
+
+  utter_ask_about_features_17:
+    - text: "Yes, you can save your favorite recipes for easy access anytime!"
+    - text: "Absolutely! The app lets you bookmark your favorite recipes so you can find them easily later."
+    - text: "For sure! Save your go-to recipes within the app for quick access whenever you need them."
+    - text: "Yes, you can store your favorite recipes in the app and retrieve them with just a click."
+
+  utter_ask_about_features_18:
+    - text: "Dark mode is available! You can switch between light and dark themes based on your preference."
+    - text: "Certainly! The app offers a dark mode option so you can choose between light and dark themes."
+    - text: "Yes, you have the option to toggle to dark mode for a more comfortable viewing experience."
+    - text: "Absolutely! Switch between light and dark themes in the app according to your visual preference."
+
+  utter_ask_about_features_19:
+    - text: "Yes, you can track your blood glucose levels to manage your sugar intake effectively!"
+    - text: "Indeed! The app allows you to log your blood glucose levels for better sugar management."
+    - text: "Absolutely! Monitor your blood sugar with our dedicated blood glucose tracking feature."
+    - text: "Yes, you can easily track your blood glucose levels to help control your sugar intake."
+
+  # Ask how to use App#
+  utter_ask_how_to_use_app_1:
+    - text: "Of course! What would you like to explore? You can try scheduling a recipe, viewing your scheduled meals, creating a grocery list, engaging in the community, and more!"
+    - text: "Certainly! What feature are you interested in? You can schedule recipes, view your meal plans, create grocery lists, interact with the community, and more!"
+    - text: "Sure thing! Explore various options like recipe scheduling, meal viewing, grocery list creation, and community engagement!"
+    - text: "Absolutely! You can dive into features such as meal planning, community posts, recipe scheduling, and much more!"
+
+  utter_ask_how_to_use_app_2:
+    - text: "Navigating the app is simple! Use the bottom navigation bar to access key features. For additional options, tap on your profile icon."
+    - text: "The app is easy to navigate; use the bottom bar for main features and tap your profile for extra options."
+    - text: "It's straightforward! The bottom navigation provides quick access to primary functions, and your profile icon reveals more settings."
+    - text: "Navigation is a breeze: simply use the bottom menu for key features and click your profile for further options!"
+
+  utter_ask_how_to_use_app_3:
+    - text: "To create an account, visit the registration page, fill in your details, and submit your credentials."
+    - text: "Creating an account is easy: go to the registration page, enter your details, and hit sign up."
+    - text: "Just visit the registration section, complete the form with your information, and create your account."
+    - text: "Sign up quickly by navigating to the registration page, filling out your details, and submitting the form!"
+
+  utter_ask_how_to_use_app_4:
+    - text: "Logging in with Google is easy! Ensure you're signed into your Google account on your device, then tap the Google icon and select your account."
+    - text: "To log in with Google, make sure your Google account is active on your device, then click the Google icon and choose your account."
+    - text: "Simply tap the Google icon, and if you're already signed into Google, select your account to log in."
+    - text: "It's effortless: tap the Google login option, and select your account from the list provided!"
+
+  utter_ask_how_to_use_app_5:
+    - text: "Forgot your password? No worries! Tap 'Forgot Password', enter your email, and follow the instructions in the email you receive to reset it."
+    - text: "If you forget your password, simply tap 'Forgot Password', provide your email, and follow the reset instructions sent to you."
+    - text: "No problem if your password slips your mind! Click 'Forgot Password', enter your email, and follow the emailed steps to reset it."
+    - text: "Password recovery is easy: tap 'Forgot Password', input your email address, and check your inbox for reset instructions!"
+
+  utter_ask_how_to_use_app_6:
+    - text: "Updating your profile is simple! Tap your profile icon, select 'Edit Profile', and enter your latest information."
+    - text: "To update your profile, click on your profile icon, choose 'Edit Profile', and modify your details."
+    - text: "You can update your information by tapping your profile, selecting 'Edit Profile', and saving the new details."
+    - text: "Simply access your profile icon, hit 'Edit Profile', and update your personal information as needed!"
+
+  utter_ask_how_to_use_app_7:
+    - text: "To create a grocery list, type the ingredient name into the add bar and press 'Add' to save it."
+    - text: "Creating a grocery list is easy: enter the ingredient in the input field and tap 'Add'."
+    - text: "Just type in what you need and click 'Add' to compile your grocery list."
+    - text: "Simply input the ingredient name and hit 'Add' to build your grocery list quickly!"
+
+  utter_ask_how_to_use_app_8:
+    - text: "Want to save a recipe? Simply tap the heart icon on the recipe details page, and it will be added to your saved list."
+    - text: "To save a recipe, tap the heart icon on its detail page and it will be bookmarked for you."
+    - text: "Just click the heart icon on the recipe page to add it to your favorites."
+    - text: "It's simple: tap the heart on the recipe details screen to save it for later!"
+
+  utter_ask_how_to_use_app_9:
+    - text: "Tracking your weight is easy! Go to the Tracker page using the bottom navigation bar, enter your current weight, and save the update."
+    - text: "You can track your weight by visiting the Tracker page from the bottom navigation and entering your weight."
+    - text: "Simply navigate to the Tracker, input your current weight, and save your progress."
+    - text: "To record your weight, access the Tracker page, add your weight, and click save!"
+
+  utter_ask_how_to_use_app_10:
+    - text: "To log your water intake, navigate to the Tracker page and tap the 'Add' button to record your daily water consumption."
+    - text: "Log your water intake by heading to the Tracker and tapping 'Add' to record your consumption."
+    - text: "Simply open the Tracker page, press the 'Add' button, and input your water consumption details."
+    - text: "It's easy to log water: just navigate to the Tracker and tap 'Add' to record your daily intake!"
+
+  utter_ask_how_to_use_app_11:
+    - text: "Want to share in the community? Visit the Community page, select an image from your phone, and tap 'Post' to share your update."
+    - text: "To post in the community, go to the Community section, choose an image, and tap 'Post'."
+    - text: "Simply navigate to the Community page, pick an image from your gallery, and hit 'Post' to share your update."
+    - text: "Sharing in the community is straightforward: select an image on the Community page and tap 'Post' to share!"
+
+  utter_ask_how_to_use_app_12:
+    - text: "Tracking your daily calories is straightforward! Go to the Tracker page from the bottom navigation bar, enter your calorie intake, and save it."
+    - text: "You can log your calorie intake by visiting the Tracker page and entering your calories."
+    - text: "Simply navigate to the Tracker, input your daily calories, and save the record."
+    - text: "Log your calorie consumption by accessing the Tracker, typing in your intake, and clicking save!"
+
+  utter_ask_how_to_use_app_13:
+    - text: "Scheduling meals is simple! On the Recipe homepage, select a recipe and schedule it on your calendar."
+    - text: "To schedule a meal, choose a recipe from the homepage and set it on your calendar."
+    - text: "Just pick a recipe and schedule it on your calendar from the Recipe section."
+    - text: "It's easy to plan meals: select a recipe and add it to your calendar for scheduling!"
+
+  utter_ask_how_to_use_app_14:
+    - text: "To create your own recipe, tap the '+' button in the bottom navigation, enter the ingredients and details, then save it."
+    - text: "Creating a recipe is simple: tap the '+' icon, fill in the recipe details, and save your creation."
+    - text: "Just click the plus button, add your ingredients and instructions, and save your new recipe."
+    - text: "You can add your own recipe by tapping the '+' button, entering the details, and hitting save!"
+
+  utter_ask_how_to_use_app_15:
+    - text: "To track your health metrics, navigate to the Tracker page and select 'Daily Analysis' to review your recorded data."
+    - text: "You can monitor your health metrics by going to the Tracker page and clicking on 'Daily Analysis'."
+    - text: "Simply access the Tracker, choose 'Daily Analysis', and review your recorded health data."
+    - text: "Check your health metrics by selecting 'Daily Analysis' on the Tracker page for a detailed review!"
+
+  utter_ask_how_to_use_app_16:
+    - text: "Want to compare before and after photos? Go to the Tracker page, navigate to the Transformation section, upload your current image, and compare it with previous ones."
+    - text: "To compare your progress photos, visit the Tracker page and the Transformation section, then upload your latest image."
+    - text: "Simply go to the Tracker, access the Transformation area, and upload your new photo to see the before and after comparison."
+    - text: "Compare your before and after photos by navigating to the Transformation section in the Tracker and uploading your current image!"
+
+  utter_ask_how_to_use_app_17:
+    - text: "You can view your health reports by entering your health data in the Health Reports section. The app will analyze and display your current health status."
+    - text: "To see your health reports, navigate to the Health Reports section where your data is analyzed and presented."
+    - text: "Simply input your health data in the Health Reports area, and the app will provide an overview of your current status."
+    - text: "Check your health reports by heading to the Health Reports section where your information is processed and displayed!"
+
+  utter_ask_how_to_use_app_18:
+    - text: "Using the chatbot is easy! Just type your question in the text box, and it will provide an instant response."
+    - text: "To use the chatbot, simply type your query and receive an immediate answer."
+    - text: "Just enter your question in the chat interface and wait for a quick response."
+    - text: "It's as simple as typing your query into the chatbot and getting a prompt reply!"
+
+  utter_ask_how_to_use_app_19:
+    - text: "Need to report inappropriate content? Tap the three-dot menu on the post, select 'Report Post', and submit your reason. Our admin team will review it."
+    - text: "To report inappropriate content, click the three-dot menu on the post, choose 'Report Post', and explain your concern."
+    - text: "Reporting content is easy: tap the three dots on the post, select 'Report Post', and provide a reason for reporting."
+    - text: "If you come across inappropriate content, use the three-dot menu to report it by selecting 'Report Post' and submitting your feedback!"
+
+  utter_ask_how_to_use_app_20:
+    - text: "Switching to dark mode is easy! Tap on your profile icon, go to settings, and select your preferred theme."
+    - text: "To enable dark mode, tap your profile, open settings, and choose the dark theme option."
+    - text: "Simply go to your profile settings and toggle the dark mode option to switch themes."
+    - text: "Dark mode can be activated by navigating to your profile settings and selecting the dark theme!"
+
+  utter_ask_how_to_use_app_21:
+    - text: "Logging out is simple. Just tap on your profile icon and select 'Logout' to sign out of your account."
+    - text: "To log out, go to your profile and choose 'Logout' to exit your account."
+    - text: "Simply tap your profile icon, click 'Logout', and you'll be signed out."
+    - text: "Logging out is easy: access your profile and select the 'Logout' option to exit!"
+
+  utter_ask_how_to_use_app_22:
+    - text: "To view your saved recipes, tap your profile icon and select 'My Recipes'. You'll find all your saved meals there!"
+    - text: "You can access your saved recipes by going to your profile and clicking 'My Recipes'."
+    - text: "Simply tap your profile and select 'My Recipes' to see all the recipes you have saved."
+    - text: "Check your saved recipes by tapping on your profile and navigating to the 'My Recipes' section!"
+
+  # Ask about health #
+  utter_ask_about_health_1:
+    - text: "Metabolic syndrome is a group of conditions—including high blood pressure, high blood sugar, excess abdominal fat, and abnormal cholesterol levels—that increase the risk of heart disease, stroke, and diabetes."
+    - text: "It's a cluster of health issues such as elevated blood pressure, high blood sugar, excess belly fat, and abnormal cholesterol that together boost your risk of heart disease, stroke, and type 2 diabetes."
+
+  utter_ask_about_health_2:
+    - text: "Metabolic syndrome is diagnosed if you have at least three of these five risk factors: increased waist size, high triglycerides, low HDL cholesterol, high blood pressure, and high blood sugar."
+    - text: "Doctors diagnose metabolic syndrome when you show three or more of these signs: a larger waist, high triglyceride levels, low HDL (good) cholesterol, high blood pressure, and elevated blood sugar."
+
+  utter_ask_about_health_3:
+    - text: "Risk factors for metabolic syndrome include obesity, physical inactivity, insulin resistance, aging, and a family history of diabetes or heart disease."
+    - text: "Key contributors to metabolic syndrome are being overweight, not exercising, insulin resistance, getting older, and a genetic predisposition to diabetes or heart issues."
+
+  utter_ask_about_health_4:
+    - text: "Yes! Metabolic syndrome can be reversed through lifestyle changes like improving your diet, exercising regularly, and maintaining a healthy weight."
+    - text: "The good news is that by eating better, exercising consistently, and shedding excess weight, you can actually reverse metabolic syndrome."
+
+  utter_ask_about_health_5:
+    - text: "Healthy lifestyle changes like eating a balanced diet, exercising daily, maintaining a healthy weight, and managing stress are key to overcoming metabolic syndrome."
+    - text: "Adopting a balanced diet, regular physical activity, proper weight control, and effective stress management are essential strategies for countering metabolic syndrome."
+
+  utter_ask_about_health_6:
+    - text: "Your diet plays a big role in metabolic syndrome. Eating whole foods, reducing sugar intake, and avoiding processed foods can help improve your health."
+    - text: "A nutritious diet rich in whole foods, with lower sugar and fewer processed items, is crucial in managing and improving metabolic syndrome."
+
+  utter_ask_about_health_7:
+    - text: "Great question! The best exercises for metabolic syndrome are aerobic activities like walking, running, swimming, or cycling, combined with strength training."
+    - text: "For managing metabolic syndrome, a mix of cardio exercises—such as walking, cycling, or swimming—and resistance training works best."
+
+  utter_ask_about_health_8:
+    - text: "You should avoid processed foods, sugary drinks, excessive salt, and unhealthy fats. Focus on whole foods like fruits, vegetables, lean proteins, and whole grains."
+    - text: "Steer clear of processed items, sugary beverages, too much salt, and bad fats, and instead concentrate on fruits, veggies, lean proteins, and whole grains."
+
+  utter_ask_about_health_9:
+    - text: "Metabolic syndrome increases your risk of heart disease by contributing to high blood pressure, unhealthy cholesterol levels, and insulin resistance."
+    - text: "By causing high blood pressure, poor cholesterol balance, and insulin resistance, metabolic syndrome significantly elevates your risk for heart disease."
+
+  utter_ask_about_health_10:
+    - text: "Insulin resistance is when your body's cells don't respond well to insulin, leading to high blood sugar levels. It is a key factor in metabolic syndrome."
+    - text: "When your cells fail to respond effectively to insulin—resulting in elevated blood sugar—this condition, called insulin resistance, is central to metabolic syndrome."
+
+  utter_ask_about_health_11:
+    - text: "Losing weight, especially reducing belly fat, is one of the best ways to improve or even reverse metabolic syndrome!"
+    - text: "Shedding excess weight, particularly around your midsection, can significantly improve and sometimes reverse the effects of metabolic syndrome."
+
+  utter_ask_about_health_12:
+    - text: "High blood pressure is one of the five risk factors for metabolic syndrome. Managing it through diet, exercise, and stress reduction is crucial for your health."
+    - text: "Since high blood pressure is a critical risk factor in metabolic syndrome, controlling it with proper nutrition, regular exercise, and stress management is vital."
+
+  utter_ask_about_health_13:
+    - text: "Cholesterol plays a key role in metabolic syndrome. High triglycerides and low HDL cholesterol increase your risk of heart disease and diabetes."
+    - text: "Abnormal cholesterol levels—specifically high triglycerides and low HDL cholesterol—are integral to metabolic syndrome and heighten your chances of heart disease and diabetes."
+
+  utter_ask_about_health_14:
+    - text: "If you're at risk for metabolic syndrome, check your blood sugar regularly. Talk to your doctor to determine the best testing frequency for you."
+    - text: "Regular blood sugar monitoring is important if you're at risk—consult your healthcare provider to figure out the optimal testing schedule for you."
+
+  utter_ask_about_health_15:
+    - text: "Chronic stress can worsen metabolic syndrome by increasing cortisol levels, leading to weight gain, high blood pressure, and insulin resistance."
+    - text: "Ongoing stress boosts cortisol, which can aggravate metabolic syndrome by promoting weight gain, raising blood pressure, and increasing insulin resistance."
+
+  utter_ask_about_health_16:
+    - text: "Genetics can influence metabolic syndrome, but lifestyle factors play a big role. A healthy diet, exercise, and weight management can help reduce your risk."
+    - text: "While your genes may predispose you to metabolic syndrome, your lifestyle choices—such as eating well, exercising, and managing weight—are key to lowering your risk."
+
+  utter_ask_about_health_17:
+    - text: "Good sleep is essential for managing metabolic syndrome. Poor sleep quality can contribute to weight gain, insulin resistance, and high blood pressure."
+    - text: "Quality sleep is crucial; lack of proper rest can lead to weight gain, increased insulin resistance, and elevated blood pressure, worsening metabolic syndrome."
+
+  utter_ask_about_health_18:
+    - text: "Some supplements, like omega-3 fatty acids, magnesium, and vitamin D, may help manage metabolic syndrome, but consult a doctor before taking them."
+    - text: "Certain supplements—such as omega-3s, magnesium, and vitamin D—might support metabolic health, though you should always check with your doctor first."
+
+  utter_ask_about_health_19:
+    - text: "Too much alcohol can increase blood sugar levels, blood pressure, and triglycerides, making metabolic syndrome worse. Moderation is key!"
+    - text: "Excessive alcohol intake can raise blood sugar, blood pressure, and triglycerides, further aggravating metabolic syndrome—it's best to drink in moderation."
+
+  utter_ask_about_health_20:
+    - text: "If untreated, metabolic syndrome increases the risk of serious conditions like type 2 diabetes, stroke, and heart disease. Early prevention is crucial!"
+    - text: "Without proper management, metabolic syndrome can lead to severe health issues such as type 2 diabetes, stroke, and heart disease, so early intervention is essential."
+
+  utter_default:
+    - text: "I apologize, but I don't have information about that. This service hasn't been provided yet. Is there something else I can help you with?"
+    - text: "I'm sorry, but I'm not able to help with that request at the moment. The service is not yet available. Would you like to know about other features I can help with?"
+    - text: "I apologize for the inconvenience, but that functionality isn't available right now. Would you like to learn about the services I can provide?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+

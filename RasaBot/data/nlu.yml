@@ -1,0 +1,555 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_about_features
+  examples: |
+    - What features does this app have?
+    - What are the features of this app?
+    - What can this app do?
+    - Could you list the features of this app?
+    - Can you tell me what functions this app offers?
+    - What functionalities are available in this app?
+
+- intent: ask_show_report_on_health_metrics_or_daily_analysis
+  examples: |
+    - Does this app can shop all the recorded data daily?
+    - Can this app store all recorded data daily?
+    - Does this app save all recorded data every day?
+    - Is this app capable of storing daily recorded data?
+    - Can this app keep track of all recorded data on a daily basis?
+
+- intent: ask_recipe_planning_feature
+  examples: |
+    - Does this app have recipe planning?
+    - Is recipe planning available in the app?
+    - Can I plan my recipes using this app?
+    - Does the app include a recipe planning function?
+
+- intent: ask_community_feature
+  examples: |
+    - Is there a community feature?
+    - Can I post and share in the community?
+    - Does the app include a forum for community interaction?
+    - Can users interact in a community space within the app?
+    - Is there a social feature for engaging with others?
+
+- intent: ask_community_feature_for_posting_sharing
+  examples: |
+    - Can I share image or videos to the communtity page?
+    - Is it possible to upload images or videos to the community page?
+    - Can I post pictures or videos on the community page?
+    - Am I allowed to share media files, like images or videos, on the community page?
+
+- intent: ask_grocery_list_feature
+  examples: |
+    - Can I create grocery lists?
+    - Does the app allow me to make grocery lists?
+    - Is there a grocery list feature in the app?
+    - Can I organize my shopping lists within the app?
+
+- intent: ask_health_tracker_feature
+  examples: |
+    - Does the app have a health tracker?
+    - Is there a health monitoring feature in the app?
+    - Can I track my health metrics using this app?
+    - Does the app offer a feature to monitor my overall health?
+
+- intent: ask_weight_tracking_feature
+  examples: |
+    - Is there a weight tracking feature?
+    - Can I track my weight changes in this app?
+    - Does the app support weight monitoring?
+    - Is weight management included in the app?
+
+- intent: ask_blood_pressure_monitoring_feature
+  examples: |
+    - Can I monitor my blood pressure in the app?
+    - Does the app offer blood pressure tracking?
+    - Can I log my blood pressure readings in the app?
+    - Is blood pressure monitoring available in this app?
+
+- intent: ask_meal_planning_feature
+  examples: |
+    - Does the app support meal planning?
+    - Is meal planning a part of the app's features?
+    - Can I plan my meals using this app?
+    - Does the app provide a meal planning tool?
+
+- intent: ask_water_intake_tracker_feature
+  examples: |
+    - Is there a water intake tracker?
+    - Can I log my water consumption in the app?
+    - Does the app include a feature to track water intake?
+    - Is water intake monitoring available in this app?
+
+- intent: ask_calorie_tracking_feature
+  examples: |
+    - Can I track my calories?
+    - Does the app support calorie tracking?
+    - Can I log my calorie intake using this app?
+    - Is calorie counting a feature in this app?
+
+- intent: ask_cholesterol_tracking_feature
+  examples: |
+    - Is there a feature to track cholesterol levels?
+    - Can I monitor my cholesterol levels with the app?
+    - Does the app allow me to track my cholesterol?
+    - Is cholesterol monitoring included in the app?
+
+- intent: ask_chatbot_feature
+  examples: |
+    - Does the app have a chatbot?
+    - Is there an AI chatbot in the app?
+    - Can I chat with a virtual assistant in this app?
+    - Does the app include a conversational chatbot?
+
+- intent: ask_save_favorite_recipes_feature
+  examples: |
+    - Can I save my favorite recipes?
+    - Is there a feature to bookmark recipes?
+    - Can I store recipes that I like in the app?
+    - Does the app allow me to save recipes for later?
+
+- intent: ask_dark_mode_feature
+  examples: |
+    - Is there a dark mode available?
+    - Does the app offer a dark mode option?
+    - Can I switch to dark mode in this app?
+    - Is a dark theme available in the app?
+
+- intent: ask_blood_glucose_tracking_feature
+  examples: |
+    - Can I track my blood glucose levels?
+    - Is blood glucose tracking supported by the app?
+    - Can I log my blood sugar readings in this app?
+    - Does the app have a feature for monitoring blood glucose levels?
+
+# Ask about app #
+- intent: ask_guidance_on_using_app
+  examples: |
+    - Can you guide me on using the app?
+    - How do I start using the app?
+    - Can you help me get started with the app?
+    - What do I need to know to use this app?
+    - I need assistance with getting started.
+    - Show me how to use this app.
+
+- intent: ask_navigate_app
+  examples: |
+    - How can I navigate this application?
+    - How do I move around in the app?
+    - What's the best way to navigate the app?
+    - How do I find my way around this app?
+    - Show me the navigation options.
+    - How do I use the menus in this app?
+
+- intent: ask_create_account
+  examples: |
+    - How do I create an account?
+    - Can you tell me how to sign up?
+    - What's the process for creating an account?
+    - How can I register on this app?
+    - How do I join the app?
+    - Guide me through creating an account.
+
+- intent: ask_login_google
+  examples: |
+    - How can I log in with Google?
+    - Can I use my Google account to log in?
+    - What's the process for Google login?
+    - How do I sign in using my Google account?
+    - Is there an option to log in with Google?
+    - How do I use Google to access the app?
+
+- intent: ask_forgot_password
+  examples: |
+    - What should I do if I forget my password?
+    - How can I reset my password if I forget it?
+    - Can you help me with password recovery?
+    - I forgot my password; what steps should I take?
+    - How do I retrieve a forgotten password?
+    - What is the process for a password reset?
+
+- intent: ask_change_profile_info
+  examples: |
+    - How do I change my profile information?
+    - Can I update my profile details?
+    - How can I edit my personal information in the app?
+    - What is the process for changing profile info?
+    - How do I modify my account details?
+    - Where can I update my profile settings?
+
+- intent: ask_create_grocery_list
+  examples: |
+    - How can I create a grocery list?
+    - Can you show me how to make a grocery list?
+    - What's the process to add a grocery list?
+    - How do I build a grocery list in the app?
+    - How can I organize my shopping list?
+    - What steps do I follow to create a grocery list?
+
+- intent: ask_save_recipe
+  examples: |
+    - How do I save a recipe?
+    - Can I bookmark recipes in this app?
+    - How can I store my favorite recipes?
+    - What is the process for saving a recipe?
+    - How do I add a recipe to my favorites?
+    - Where do I save recipes in the app?
+
+- intent: ask_track_weight
+  examples: |
+    - How can I track my weight?
+    - Can I log my weight in the app?
+    - How do I record my weight progress?
+    - What steps are there to track weight?
+    - How do I monitor my weight using the app?
+    - Show me how to track my weight.
+
+- intent: ask_log_water_intake
+  examples: |
+    - How do I log my water intake?
+    - Can I record my water consumption in the app?
+    - What is the process for tracking water intake?
+    - How do I monitor how much water I drink?
+    - Where can I log my water intake?
+    - How can I update my water consumption details?
+
+- intent: ask_post_in_community
+  examples: |
+    - How can I post in the community?
+    - How do I share an update in the community?
+    - What is the process for making a community post?
+    - How do I contribute to the community section?
+    - Can you show me how to post in the community?
+    - Where do I post my updates in the community?
+
+- intent: ask_track_calories
+  examples: |
+    - How do I track my calories?
+    - Can I record my calorie intake?
+    - What is the process for calorie tracking?
+    - How can I log the calories I consume?
+    - How do I monitor my calorie count?
+    - Show me how to track calories in the app.
+
+- intent: ask_schedule_meals
+  examples: |
+    - How can I schedule my meals?
+    - Can I plan my meals ahead of time?
+    - What is the process for meal scheduling?
+    - How do I set up a meal schedule in the app?
+    - How can I organize my meals on the app?
+    - Show me how to schedule my meals.
+
+- intent: ask_create_recipe
+  examples: |
+    - How do I create my own recipe?
+    - Can I add a custom recipe to the app?
+    - What is the process for creating a recipe?
+    - How do I submit my own recipe?
+    - How can I write and share my recipe?
+    - Show me how to create a new recipe.
+
+- intent: ask_track_health_metrics
+  examples: |
+    - How can I track my health metrics?
+    - What health metrics can I monitor in the app?
+    - How do I record various health stats?
+    - Can you show me how to log my health metrics?
+    - How do I monitor my overall health data?
+    - What is the process to track my health metrics?
+
+- intent: ask_compare_before_after_photos
+  examples: |
+    - How do I compare my before and after photos?
+    - Can I see a comparison of my progress photos?
+    - What is the process for comparing photos?
+    - How can I view a before/after photo comparison?
+    - How do I upload photos to track progress visually?
+    - Show me how to compare my before and after photos.
+
+- intent: ask_view_health_reports
+  examples: |
+    - How can I view my health reports?
+    - Where can I see my health reports?
+    - What is the process to access health reports?
+    - How do I review my health data reports?
+    - Can you show me my health report history?
+    - How do I access detailed health reports in the app?
+
+- intent: ask_use_chatbot
+  examples: |
+    - How do I use the chatbot?
+    - Can you help me interact with the chatbot?
+    - What is the process for using the chatbot?
+    - How can I start a conversation with the chatbot?
+    - Where do I find the chatbot feature?
+    - Show me how to use the chatbot.
+
+- intent: ask_report_inappropriate_content
+  examples: |
+    - How can I report inappropriate content?
+    - What is the process for reporting unsuitable content?
+    - How do I flag content that I find inappropriate?
+    - Can I report offensive material in the app?
+    - How do I notify someone about inappropriate content?
+    - Show me how to report content that violates guidelines.
+
+- intent: ask_switch_dark_mode
+  examples: |
+    - How do I switch to dark mode?
+    - Can I change to dark mode in the app?
+    - What is the process to toggle dark mode?
+    - How can I enable dark mode?
+    - Where is the dark mode toggle located?
+    - Show me how to switch the app to dark mode.
+
+- intent: ask_log_out
+  examples: |
+    - How can I log out?
+    - What is the process for logging out?
+    - How do I sign out of the app?
+    - Can you show me how to log out?
+    - How do I exit my account in the app?
+    - What steps do I follow to log out?
+
+- intent: ask_view_saved_recipes
+  examples: |
+    - How do I view my saved recipes?
+    - Where can I see the recipes I've saved?
+    - What is the process for accessing saved recipes?
+    - How can I retrieve my bookmarked recipes?
+    - Can I view my favorite recipes?
+    - Show me how to view my saved recipes.
+
+
+- intent: ask_what_is_metabolic_syndrome
+  examples: |
+    - What is metabolic syndrome?
+    - Can you explain what metabolic syndrome is?
+    - Define metabolic syndrome.
+    - How would you describe metabolic syndrome?
+
+- intent: ask_how_is_metabolic_syndrome_diagnosed
+  examples: |
+    - How is metabolic syndrome diagnosed?
+    - What tests are used to diagnose metabolic syndrome?
+    - How do doctors determine if I have metabolic syndrome?
+    - What is the diagnostic process for metabolic syndrome?
+
+- intent: ask_risk_factors_metabolic_syndrome
+  examples: |
+    - What are the risk factors for metabolic syndrome?
+    - Which factors increase my risk for metabolic syndrome?
+    - What contributes to the development of metabolic syndrome?
+    - What are the main risk factors for metabolic syndrome?
+
+- intent: ask_can_metabolic_syndrome_be_reversed
+  examples: |
+    - Can metabolic syndrome be reversed?
+    - Is it possible to cure metabolic syndrome?
+    - Can lifestyle changes reverse metabolic syndrome?
+    - How can metabolic syndrome be reversed?
+
+- intent: ask_lifestyle_changes_for_metabolic_syndrome
+  examples: |
+    - What lifestyle changes help with metabolic syndrome?
+    - Which lifestyle modifications can improve metabolic syndrome?
+    - How can I adjust my lifestyle to manage metabolic syndrome?
+    -   
+
+- intent: ask_diet_effect_on_metabolic_syndrome
+  examples: |
+    - How does diet affect metabolic syndrome?
+    - What role does nutrition play in metabolic syndrome?
+    - How can dietary changes impact metabolic syndrome?
+    - Does my diet influence my metabolic syndrome condition?
+
+- intent: ask_exercises_for_metabolic_syndrome
+  examples: |
+    - What exercises are good for metabolic syndrome?
+    - Which types of physical activity benefit metabolic syndrome?
+    - What workouts help manage metabolic syndrome?
+    - How does exercise influence metabolic syndrome?
+
+- intent: ask_foods_to_avoid_for_metabolic_syndrome
+  examples: |
+    - What foods should I avoid with metabolic syndrome?
+    - Are there foods that worsen metabolic syndrome?
+    - Which foods are harmful for someone with metabolic syndrome?
+    - What dietary restrictions should I follow for metabolic syndrome?
+
+- intent: ask_heart_health_metabolic_syndrome
+  examples: |
+    - How does metabolic syndrome affect heart health?
+    - What impact does metabolic syndrome have on the heart?
+    - Can metabolic syndrome lead to heart problems?
+    - How is heart health compromised by metabolic syndrome?
+
+- intent: ask_what_is_insulin_resistance
+  examples: |
+    - What is insulin resistance?
+    - Can you explain insulin resistance?
+    - How is insulin resistance related to metabolic syndrome?
+    - What does insulin resistance mean?
+
+- intent: ask_weight_loss_benefit_for_metabolic_syndrome
+  examples: |
+    - Can weight loss help with metabolic syndrome?
+    - How does losing weight affect metabolic syndrome?
+    - Is weight loss beneficial for managing metabolic syndrome?
+    - Will reducing weight improve my metabolic condition?
+
+- intent: ask_blood_pressure_relation_metabolic_syndrome
+  examples: |
+    - How does blood pressure relate to metabolic syndrome?
+    - What is the connection between high blood pressure and metabolic syndrome?
+    - How is blood pressure affected by metabolic syndrome?
+    - Can metabolic syndrome cause elevated blood pressure?
+
+- intent: ask_cholesterol_role_metabolic_syndrome
+  examples: |
+    - What role does cholesterol play in metabolic syndrome?
+    - How does metabolic syndrome affect cholesterol levels?
+    - What is the impact of metabolic syndrome on cholesterol?
+    - Can metabolic syndrome alter my cholesterol levels?
+
+- intent: ask_frequency_of_blood_sugar_checks
+  examples: |
+    - How often should I check my blood sugar?
+    - What is the recommended frequency for blood sugar monitoring?
+    - How frequently do I need to test my blood sugar with metabolic syndrome?
+    - When should I check my blood sugar levels?
+
+- intent: ask_stress_effect_on_metabolic_syndrome
+  examples: |
+    - How does stress affect metabolic syndrome?
+    - What impact does stress have on metabolic syndrome?
+    - Can stress worsen metabolic syndrome?
+    - How important is stress management in controlling metabolic syndrome?
+
+- intent: ask_is_metabolic_syndrome_genetic
+  examples: |
+    - Is metabolic syndrome genetic?
+    - Can metabolic syndrome run in families?
+    - Does family history play a role in metabolic syndrome?
+    - Is there a hereditary component to metabolic syndrome?
+
+- intent: ask_sleep_effect_on_metabolic_syndrome
+  examples: |
+    - How does sleep affect metabolic syndrome?
+    - Is there a link between sleep quality and metabolic syndrome?
+    - How important is sleep in managing metabolic syndrome?
+    - Can improving sleep help with metabolic syndrome?
+
+- intent: ask_supplements_for_metabolic_syndrome
+  examples: |
+    - What supplements help with metabolic syndrome?
+    - Are there vitamins or supplements recommended for metabolic syndrome?
+    - Can dietary supplements improve metabolic syndrome?
+    - Which supplements might benefit someone with metabolic syndrome?
+
+- intent: ask_alcohol_effect_on_metabolic_syndrome
+  examples: |
+    - How does alcohol affect metabolic syndrome?
+    - Is it safe to drink alcohol with metabolic syndrome?
+    - What impact does alcohol have on metabolic syndrome?
+    - Should I avoid alcohol if I have metabolic syndrome?
+
+- intent: ask_long_term_risks_metabolic_syndrome
+  examples: |
+    - What are the long-term risks of metabolic syndrome?
+    - Can metabolic syndrome lead to other chronic diseases?
+    - What complications may arise from long-term metabolic syndrome?
+    - How does metabolic syndrome affect long-term health?
+

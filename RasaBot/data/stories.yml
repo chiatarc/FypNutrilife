@@ -1,0 +1,355 @@
+version: "3.1"
+
+stories:
+# --------------------------
+# Small Talk Stories
+# --------------------------
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# --------------------------
+# Features Stories
+# --------------------------
+- story: ask about features story
+  steps:
+  - intent: ask_about_features
+  - action: utter_ask_about_features_1
+  - action: utter_ask_about_features_2
+  - action: utter_ask_about_features_3
+
+- story: ask view on report for health metrics or daily analysis
+  steps:
+  - intent: ask_show_report_on_health_metrics_or_daily_analysis
+  - action: utter_ask_about_features_4
+
+- story: ask recipe planning feature story
+  steps:
+  - intent: ask_recipe_planning_feature
+  - action: utter_ask_about_features_5
+
+- story: ask community feature story
+  steps:
+  - intent: ask_community_feature
+  - action: utter_ask_about_features_6
+
+- story: ask grocery list feature story
+  steps:
+  - intent: ask_grocery_list_feature
+  - action: utter_ask_about_features_7
+
+- story: ask health tracker feature story
+  steps:
+  - intent: ask_health_tracker_feature
+  - action: utter_ask_about_features_8
+
+- story: ask weight tracking feature story
+  steps:
+  - intent: ask_weight_tracking_feature
+  - action: utter_ask_about_features_9
+
+- story: ask blood pressure monitoring feature story
+  steps:
+  - intent: ask_blood_pressure_monitoring_feature
+  - action: utter_ask_about_features_10
+
+- story: ask meal planning feature story
+  steps:
+  - intent: ask_meal_planning_feature
+  - action: utter_ask_about_features_11
+
+- story: ask water intake tracker feature story
+  steps:
+  - intent: ask_water_intake_tracker_feature
+  - action: utter_ask_about_features_12
+
+- story: ask calorie tracking feature story
+  steps:
+  - intent: ask_calorie_tracking_feature
+  - action: utter_ask_about_features_13
+
+- story: ask cholesterol tracking feature story
+  steps:
+  - intent: ask_cholesterol_tracking_feature
+  - action: utter_ask_about_features_14
+
+- story: ask community posting and sharing story
+  steps:
+  - intent: ask_community_feature_for_posting_sharing
+  - action: utter_ask_about_features_15
+
+- story: ask chatbot feature story
+  steps:
+  - intent: ask_chatbot_feature
+  - action: utter_ask_about_features_16
+
+- story: ask save favorite recipes feature story
+  steps:
+  - intent: ask_save_favorite_recipes_feature
+  - action: utter_ask_about_features_17
+
+- story: ask dark mode feature story
+  steps:
+  - intent: ask_dark_mode_feature
+  - action: utter_ask_about_features_18
+
+- story: ask blood glucose tracking feature story
+  steps:
+  - intent: ask_blood_glucose_tracking_feature
+  - action: utter_ask_about_features_19
+
+# --------------------------
+# How-to-Use-App Stories
+# --------------------------
+- story: ask guidance on using app story
+  steps:
+  - intent: ask_guidance_on_using_app
+  - action: utter_ask_how_to_use_app_1
+
+- story: ask navigate app story
+  steps:
+  - intent: ask_navigate_app
+  - action: utter_ask_how_to_use_app_2
+
+- story: ask create account story
+  steps:
+  - intent: ask_create_account
+  - action: utter_ask_how_to_use_app_3
+
+- story: ask login with google story
+  steps:
+  - intent: ask_login_google
+  - action: utter_ask_how_to_use_app_4
+
+- story: ask forgot password story
+  steps:
+  - intent: ask_forgot_password
+  - action: utter_ask_how_to_use_app_5
+
+- story: ask change profile info story
+  steps:
+  - intent: ask_change_profile_info
+  - action: utter_ask_how_to_use_app_6
+
+- story: ask create grocery list story
+  steps:
+  - intent: ask_create_grocery_list
+  - action: utter_ask_how_to_use_app_7
+
+- story: ask save recipe story
+  steps:
+  - intent: ask_save_recipe
+  - action: utter_ask_how_to_use_app_8
+
+- story: ask track weight story
+  steps:
+  - intent: ask_track_weight
+  - action: utter_ask_how_to_use_app_9
+
+- story: ask log water intake story
+  steps:
+  - intent: ask_log_water_intake
+  - action: utter_ask_how_to_use_app_10
+
+- story: ask post in community story
+  steps:
+  - intent: ask_post_in_community
+  - action: utter_ask_how_to_use_app_11
+
+- story: ask track calories story
+  steps:
+  - intent: ask_track_calories
+  - action: utter_ask_how_to_use_app_12
+
+- story: ask schedule meals story
+  steps:
+  - intent: ask_schedule_meals
+  - action: utter_ask_how_to_use_app_13
+
+- story: ask create recipe story
+  steps:
+  - intent: ask_create_recipe
+  - action: utter_ask_how_to_use_app_14
+
+- story: ask track health metrics story
+  steps:
+  - intent: ask_track_health_metrics
+  - action: utter_ask_how_to_use_app_15
+
+- story: ask compare before after photos story
+  steps:
+  - intent: ask_compare_before_after_photos
+  - action: utter_ask_how_to_use_app_16
+
+- story: ask view health reports story
+  steps:
+  - intent: ask_view_health_reports
+  - action: utter_ask_how_to_use_app_17
+
+- story: ask use chatbot story
+  steps:
+  - intent: ask_use_chatbot
+  - action: utter_ask_how_to_use_app_18
+
+- story: ask report inappropriate content story
+  steps:
+  - intent: ask_report_inappropriate_content
+  - action: utter_ask_how_to_use_app_19
+
+- story: ask switch dark mode story
+  steps:
+  - intent: ask_switch_dark_mode
+  - action: utter_ask_how_to_use_app_20
+
+- story: ask log out story
+  steps:
+  - intent: ask_log_out
+  - action: utter_ask_how_to_use_app_21
+
+- story: ask view saved recipes story
+  steps:
+  - intent: ask_view_saved_recipes
+  - action: utter_ask_how_to_use_app_22
+
+# --------------------------
+# Health / Metabolic Syndrome Stories
+# --------------------------
+- story: ask what is metabolic syndrome story
+  steps:
+  - intent: ask_what_is_metabolic_syndrome
+  - action: utter_ask_about_health_1
+
+- story: ask how is metabolic syndrome diagnosed story
+  steps:
+  - intent: ask_how_is_metabolic_syndrome_diagnosed
+  - action: utter_ask_about_health_2
+
+- story: ask risk factors for metabolic syndrome story
+  steps:
+  - intent: ask_risk_factors_metabolic_syndrome
+  - action: utter_ask_about_health_3
+
+- story: ask can metabolic syndrome be reversed story
+  steps:
+  - intent: ask_can_metabolic_syndrome_be_reversed
+  - action: utter_ask_about_health_4
+
+- story: ask lifestyle changes for metabolic syndrome story
+  steps:
+  - intent: ask_lifestyle_changes_for_metabolic_syndrome
+  - action: utter_ask_about_health_5
+
+- story: ask diet effect on metabolic syndrome story
+  steps:
+  - intent: ask_diet_effect_on_metabolic_syndrome
+  - action: utter_ask_about_health_6
+
+- story: ask exercises for metabolic syndrome story
+  steps:
+  - intent: ask_exercises_for_metabolic_syndrome
+  - action: utter_ask_about_health_7
+
+- story: ask foods to avoid for metabolic syndrome story
+  steps:
+  - intent: ask_foods_to_avoid_for_metabolic_syndrome
+  - action: utter_ask_about_health_8
+
+- story: ask heart health metabolic syndrome story
+  steps:
+  - intent: ask_heart_health_metabolic_syndrome
+  - action: utter_ask_about_health_9
+
+- story: ask what is insulin resistance story
+  steps:
+  - intent: ask_what_is_insulin_resistance
+  - action: utter_ask_about_health_10
+
+- story: ask weight loss benefit for metabolic syndrome story
+  steps:
+  - intent: ask_weight_loss_benefit_for_metabolic_syndrome
+  - action: utter_ask_about_health_11
+
+- story: ask blood pressure relation metabolic syndrome story
+  steps:
+  - intent: ask_blood_pressure_relation_metabolic_syndrome
+  - action: utter_ask_about_health_12
+
+- story: ask cholesterol role in metabolic syndrome story
+  steps:
+  - intent: ask_cholesterol_role_metabolic_syndrome
+  - action: utter_ask_about_health_13
+
+- story: ask frequency of blood sugar checks story
+  steps:
+  - intent: ask_frequency_of_blood_sugar_checks
+  - action: utter_ask_about_health_14
+
+- story: ask stress effect on metabolic syndrome story
+  steps:
+  - intent: ask_stress_effect_on_metabolic_syndrome
+  - action: utter_ask_about_health_15
+
+- story: ask if metabolic syndrome is genetic story
+  steps:
+  - intent: ask_is_metabolic_syndrome_genetic
+  - action: utter_ask_about_health_16
+
+- story: ask sleep effect on metabolic syndrome story
+  steps:
+  - intent: ask_sleep_effect_on_metabolic_syndrome
+  - action: utter_ask_about_health_17
+
+- story: ask supplements for metabolic syndrome story
+  steps:
+  - intent: ask_supplements_for_metabolic_syndrome
+  - action: utter_ask_about_health_18
+
+- story: ask alcohol effect on metabolic syndrome story
+  steps:
+  - intent: ask_alcohol_effect_on_metabolic_syndrome
+  - action: utter_ask_about_health_19
+
+- story: ask long term risks of metabolic syndrome story
+  steps:
+  - intent: ask_long_term_risks_metabolic_syndrome
+  - action: utter_ask_about_health_20
+
+# --------------------------
+# Fallback Story
+# --------------------------
+- story: fallback story
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+
+
+
